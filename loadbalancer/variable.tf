@@ -10,7 +10,7 @@ locals{
     ]
 ])
 }
-resource "azurerm_resource_group" "loadbalancerrg" {
+resource "azurerm_resource_group" "loadbalancergeorge" {
   name     = "loadbalancergeorge"
   location = "West Europe"
 }
