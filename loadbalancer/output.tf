@@ -1,7 +1,7 @@
 output "loadbalancerconfig" {
   value = local.loadbalancerconfig
 }
-output "loadbalancerconfig" {
+output "loadbalancerconfig_name" {
   value=[for app in local.loadbalancerconfig : app.name]
 }
 output "loadbalancer" {
