@@ -7,6 +7,6 @@ output "allocation_method" {
 output "loadbalancer" {
   value = var.loadbalancer
 }
-output "loadbalancerconfig" {
+output "Nams_loadbalancerconfig" {
   value=[for app in loadbalancerlist : app.name]
 }
