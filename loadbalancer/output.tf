@@ -7,7 +7,4 @@ output "loadbalancerconfig_name" {
 output "loadbalancer" {
   value = var.loadbalancer
 }
-variable "loadbalancer"{
- type=string
- default="loadbalancer"
-}
+
