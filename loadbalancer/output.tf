@@ -1,5 +1,5 @@
 output "loadbalancerconfig" {
-  value = local.loadbalancerconfig
+  value = local.loadbalancerlist
 }
 output "allocation_method" {
   value=[for app in local.loadbalancerconfig : app.allocation_method]
