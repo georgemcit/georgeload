@@ -33,3 +33,7 @@ resource "azurerm_lb" "azureloadbalancerexample" {
     public_ip_address_id = each.value.id
   }
 }
+variable "loadbalancer"{
+ type=string
+ default="loadbalancer"
+}
