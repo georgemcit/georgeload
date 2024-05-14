@@ -1,5 +1,5 @@
 locals{
-  loadbalancerconfig=[for f in fileset("${path.module}/lbfolder", "[^_]*.yaml") : yamldecode(file("${path.module}/lbfolder/${f}"))]
+  loadbalancerconfig=[for f in fileset("${path.module}/loadbalancer", "[^_]*.yaml") : yamldecode(file("${path.module}/loadbalancer/${f}"))]
   loadbalancerlist = flatten([
     for app in local.loadbalancerconfig : [
       for loadbalancer in try(app.loadbalancerconfiguration, []) :{
@@ -11,7 +11,7 @@ locals{
 ])
 }
 resource "azurerm_resource_group" "loadbalancerrg" {
-  name     = "LoadBalancerRG"
+  name     = "loadbalancergeorge"
   location = "West Europe"
 }
 
