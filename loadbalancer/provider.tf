@@ -32,7 +32,7 @@ variable "tenant_id"{
 
 variable"loadbalancer_name"{
   type=string
-  default="West Eruope"
+  default="LoadbalanserRG"
 }
 variable"loadbalancer_location"{
   type=string
