@@ -35,7 +35,7 @@ variable"loadbalancer_name"{
   default="West Eruope"
 }
 variable"loadbalancer_location"{
-  type="loadbalancerrg"
+  type=string
   default="West Eruope"
 }
 variable "folder"{
