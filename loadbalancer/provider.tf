@@ -31,7 +31,7 @@ variable "tenant_id"{
 }
 
 variable"loadbalancer_name"{
-   type="LoadbalancerRG"
+   type="loadbalancerrg"
    default="West Eruope"
 }
 
