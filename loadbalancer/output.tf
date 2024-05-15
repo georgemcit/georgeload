@@ -14,7 +14,7 @@ variable "tenant_id"{
 
 variable"loadbalancer_name"{
   type=string
-  default="LoadbalanserRG"
+  default="georgeibrahim"
 }
 variable"loadbalancer_location"{
   type=string
