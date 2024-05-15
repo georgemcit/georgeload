@@ -17,28 +17,4 @@ provider "azurerm"{
   client_secret=var.client_secret
   tenant_id=var.tenant_id
 }
-variable "subscription_id"{
-  type=string
-}
-variable "client_id"{
-  type=string
-}
-variable "client_secret"{
-  type=string
-}
-variable "tenant_id"{
-  type=string
-}
 
-variable"loadbalancer_name"{
-  type=string
-  default="LoadbalanserRG"
-}
-variable"loadbalancer_location"{
-  type=string
-  default="West Europe"
-}
-variable "folder"{
-  type=string
-  default="lbfolder"
-}
