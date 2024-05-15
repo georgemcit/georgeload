@@ -36,7 +36,7 @@ variable"loadbalancer_name"{
 }
 variable"loadbalancer_location"{
   type=string
-  default="West Eruope"
+  default="West Europe"
 }
 variable "folder"{
   type=string
