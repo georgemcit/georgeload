@@ -1,5 +1,5 @@
 loadbalancerconfiguration:
   - publicipname: newpublicip
     allocation_method: Static
-- publicipname: georgenewpublicip
+- publicipname: george
     allocation_method: Static
