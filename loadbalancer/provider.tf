@@ -40,5 +40,5 @@ variable"loadbalancer_location"{
 }
 variable "folder"{
   type=string
-  default="lbfolder
+  default="lbfolder"
 }
