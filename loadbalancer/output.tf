@@ -6,3 +6,4 @@ output "allocation_method" {
 }
 output "loadbalancer" {
   value = var.loadbalancer
+}
