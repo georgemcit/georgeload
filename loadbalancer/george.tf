@@ -1,5 +1,5 @@
 locals{
-  loadbalancerconfig=[for f in fileset("${path.module}/${var.loadbalancer}", "[^_]*.yaml") : yamldecode(file("${path.module}/${var.loadbalancer}/${f}"))]
+  loadbalancerconfig=[for f in fileset("${path.module}/${var.folder}", "[^_]*.yaml") : yamldecode(file("${path.module}/${var.folder}/${f}"))]
   loadbalancerlist = flatten([
     for app in local.loadbalancerconfig : [
       for loadbalancer in try(app.loadbalancerconfiguration, []) :{
@@ -11,8 +11,8 @@ locals{
 ])
 }
 resource "azurerm_resource_group" "loadbalancerrg" {
-  name     = "loadbalancergeorge"
-  location = "West Europe"
+  name     = var.loadbalancer_name
+  location = var.loadbalancer_location
 }
 
 resource "azurerm_public_ip" "azurepublicipexample" {
@@ -32,8 +32,4 @@ resource "azurerm_lb" "azureloadbalancerexample" {
     name                 = "PublicIPAddress"
     public_ip_address_id = each.value.id
   }
-}
-variable "loadbalancer"{
- type=string
- default="loadbalancer"
 }
