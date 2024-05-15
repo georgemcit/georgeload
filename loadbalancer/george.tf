@@ -10,7 +10,7 @@ locals{
     ]
 ])
 }
-resource "azurerm_resource_group" "georgeibrahim" {
+resource "azurerm_resource_group" "loadbalancerrg" {
   name     = var.loadbalancer_name
   location = var.loadbalancer_location
 }
