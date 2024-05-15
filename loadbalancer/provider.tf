@@ -31,11 +31,14 @@ variable "tenant_id"{
 }
 
 variable"loadbalancer_name"{
+  type=string
+  default="West Eruope"
+}
+variable"loadbalancer_location"{
   type="loadbalancerrg"
   default="West Eruope"
 }
-
-variable "folser"{
+variable "folder"{
   type=string
   default="lbfolder
 }
